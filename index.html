@@ -25,82 +25,33 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
 #main-nav {
-background: var(--purple-header);
-display: none;
-align-items: center;
-padding: 0 24px;
-height: 76px;
-gap: 12px;
-border-bottom: 2px solid rgba(0,0,0,0.15);
-position: sticky; top: 0; z-index: 50;
+background: var(--purple-header); display: none; align-items: center;
+padding: 0 24px; height: 76px; gap: 12px;
+border-bottom: 2px solid rgba(0,0,0,0.15); position: sticky; top: 0; z-index: 50;
 }
-.nav-logo {
-font-family: 'Atkinson Hyperlegible', sans-serif;
-font-weight: 700; font-size: 2rem;
-color: var(--purple-dark);
--webkit-text-stroke: 2.5px white;
-paint-order: stroke fill;
-margin-right: 12px;
-}
+.nav-logo { font-family: 'Atkinson Hyperlegible', sans-serif; font-weight: 700; font-size: 2rem; color: var(--purple-dark); -webkit-text-stroke: 2.5px white; paint-order: stroke fill; margin-right: 12px; }
 .nav-links { display: flex; gap: 8px; flex: 1; }
-.nav-btn {
-background: var(--white); border: 2px solid var(--white);
-border-radius: 6px; padding: 8px 20px;
-font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 0.95rem;
-cursor: pointer; transition: background 0.15s; white-space: nowrap;
-}
+.nav-btn { background: var(--white); border: 2px solid var(--white); border-radius: 6px; padding: 8px 20px; font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 0.95rem; cursor: pointer; transition: background 0.15s; white-space: nowrap; }
 .nav-btn:hover, .nav-btn.active-tab { background: var(--purple-light); }
-.nav-book {
-background: var(--beige); border: none; border-radius: 50px;
-padding: 10px 22px; font-family: 'DM Sans', sans-serif;
-font-weight: 700; font-size: 0.95rem; cursor: pointer; white-space: nowrap;
-}
-.nav-arrow {
-background: none; border: 2px solid var(--white); border-radius: 50%;
-width: 36px; height: 36px; min-width: 36px; display: flex; align-items: center;
-justify-content: center; font-size: 1.1rem; cursor: pointer;
-color: var(--white); font-weight: bold;
-transition: background 0.15s;
-}
+.nav-book { background: var(--beige); border: none; border-radius: 50px; padding: 10px 22px; font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 0.95rem; cursor: pointer; white-space: nowrap; }
+.nav-arrow { background: none; border: 2px solid var(--white); border-radius: 50%; width: 36px; height: 36px; min-width: 36px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; cursor: pointer; color: var(--white); font-weight: bold; transition: background 0.15s; }
 .nav-arrow:hover { background: rgba(255,255,255,0.2); }
 .nav-arrow-tooltip { position: relative; }
-.nav-arrow-tooltip:hover::after {
-content: 'Log out';
-position: absolute; bottom: -28px; right: 0;
-background: #333; color: #fff; font-size: 0.75rem;
-padding: 3px 8px; border-radius: 4px; white-space: nowrap;
-font-family: 'DM Sans', sans-serif;
-}
+.nav-arrow-tooltip:hover::after { content: 'Log out'; position: absolute; bottom: -28px; right: 0; background: #333; color: #fff; font-size: 0.75rem; padding: 3px 8px; border-radius: 4px; white-space: nowrap; font-family: 'DM Sans', sans-serif; }
 .page { display: none; }
 .page.active { display: block; }
 #page-chat.active { display: flex; flex-direction: column; }
 #login-shell { min-height: 100vh; display: flex; flex-direction: column; }
 #login-shell.hidden { display: none !important; }
-.login-nav {
-background: var(--purple-header); padding: 16px 32px;
-display: flex; align-items: center;
-border-bottom: 2px solid rgba(0,0,0,0.15);
-}
-.login-nav-logo {
-font-family: 'Atkinson Hyperlegible', sans-serif;
-font-weight: 700; font-size: 2rem; color: var(--purple-dark);
--webkit-text-stroke: 2.5px white; paint-order: stroke fill;
-}
+.login-nav { background: var(--purple-header); padding: 16px 32px; display: flex; align-items: center; border-bottom: 2px solid rgba(0,0,0,0.15); }
+.login-nav-logo { font-family: 'Atkinson Hyperlegible', sans-serif; font-weight: 700; font-size: 2rem; color: var(--purple-dark); -webkit-text-stroke: 2.5px white; paint-order: stroke fill; }
 .login-body { flex: 1; display: flex; flex-direction: column; align-items: center; padding: 60px 20px; }
 .login-body h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 8px; }
 .login-body p { font-size: 1.1rem; margin-bottom: 32px; color: #333; }
 .login-form { display: flex; flex-direction: column; gap: 12px; width: 100%; max-width: 460px; }
-.login-form input {
-background: #E0DCDC; border: none; border-radius: 30px;
-padding: 14px 24px; font-size: 1rem; font-family: 'DM Sans', sans-serif;
-outline: none; text-align: center;
-}
+.login-form input { background: #E0DCDC; border: none; border-radius: 30px; padding: 14px 24px; font-size: 1rem; font-family: 'DM Sans', sans-serif; outline: none; text-align: center; }
 .login-form input:focus { background: #d0ccd0; }
-.login-submit {
-background: var(--purple-dark); color: var(--white); border: none;
-border-radius: 8px; padding: 16px; font-size: 1.1rem; font-weight: 600;
-cursor: pointer; margin-top: 16px; transition: background 0.15s; font-family: 'DM Sans', sans-serif;
-}
+.login-submit { background: var(--purple-dark); color: var(--white); border: none; border-radius: 8px; padding: 16px; font-size: 1.1rem; font-weight: 600; cursor: pointer; margin-top: 16px; transition: background 0.15s; font-family: 'DM Sans', sans-serif; }
 .login-submit:hover { background: #3a2555; }
 #app-shell { display: none; flex-direction: column; min-height: 100vh; }
 #app-shell.visible { display: flex; }
@@ -112,15 +63,9 @@ cursor: pointer; margin-top: 16px; transition: background 0.15s; font-family: 'D
 .msg-bubble { background: var(--purple-chat); border-radius: 16px; padding: 16px 20px; max-width: 72%; font-size: 0.97rem; line-height: 1.6; }
 .msg-bubble.user { background: var(--chat-user); }
 .chat-suggestions { display: flex; gap: 10px; flex-wrap: wrap; padding: 0 32px 12px; }
-.suggestion-chip {
-background: #E0DCDC; border: none; border-radius: 30px; padding: 8px 18px;
-font-size: 0.88rem; cursor: pointer; font-family: 'DM Sans', sans-serif; transition: background 0.15s;
-}
+.suggestion-chip { background: #E0DCDC; border: none; border-radius: 30px; padding: 8px 18px; font-size: 0.88rem; cursor: pointer; font-family: 'DM Sans', sans-serif; transition: background 0.15s; }
 .suggestion-chip:hover { background: var(--purple-light); }
-.chat-book-banner {
-display: flex; align-items: center; justify-content: space-between;
-background: #E0DCDC; margin: 0 32px 8px; border-radius: 8px; padding: 12px 20px; font-size: 1rem;
-}
+.chat-book-banner { display: flex; align-items: center; justify-content: space-between; background: #E0DCDC; margin: 0 32px 8px; border-radius: 8px; padding: 12px 20px; font-size: 1rem; }
 .book-small-btn { background: #333; color: #fff; border: none; border-radius: 20px; padding: 6px 18px; font-weight: 700; cursor: pointer; font-family: 'DM Sans', sans-serif; }
 .chat-input-row { display: flex; align-items: center; padding: 8px 32px 20px; gap: 12px; border-top: 1px solid var(--border); }
 .chat-input-wrap { flex: 1; display: flex; align-items: center; gap: 8px; }
@@ -181,9 +126,7 @@ background: #E0DCDC; margin: 0 32px 8px; border-radius: 8px; padding: 12px 20px;
 .editor-msg { display: flex; flex-direction: column; gap: 4px; }
 .editor-msg-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; color: #888; letter-spacing: 0.04em; }
 .editor-msg-label.lbl-assistant { color: var(--purple-dark); }
-.editor-msg-label.lbl-user { color: #555; }
-.editor-msg textarea { width: 100%; border: 1.5px solid var(--border); border-radius: 10px; padding: 10px 14px; font-family: 'DM Sans', sans-serif; font-size: 0.93rem; line-height: 1.5; resize: vertical; outline: none; background: var(--white); transition: border-color 0.15s; }
-.editor-msg textarea:focus { border-color: var(--purple-dark); }
+.editor-msg textarea { width: 100%; border: 1.5px solid var(--border); border-radius: 10px; padding: 10px 14px; font-family: 'DM Sans', sans-serif; font-size: 0.93rem; line-height: 1.5; resize: vertical; outline: none; background: var(--white); }
 .editor-msg.assistant textarea { background: var(--purple-chat); }
 .editor-msg.user textarea { background: var(--chat-user); }
 .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.4); z-index: 100; align-items: center; justify-content: center; }
@@ -201,67 +144,13 @@ background: #E0DCDC; margin: 0 32px 8px; border-radius: 8px; padding: 12px 20px;
 .typing-dots span:nth-child(2) { animation-delay: 0.2s; }
 .typing-dots span:nth-child(3) { animation-delay: 0.4s; }
 @keyframes tdot { 0%,80%,100%{transform:translateY(0);opacity:.4} 40%{transform:translateY(-6px);opacity:1} }
-@media (max-width: 1024px) {
-.nav-btn { padding: 8px 14px; font-size: 0.88rem; }
-.nav-book { padding: 8px 16px; font-size: 0.88rem; }
-#page-history { padding: 32px 28px; }
-.history-search { width: 260px; }
-.profile-wrap { padding: 24px 28px; }
-.resource-wrap { padding: 24px 28px; }
-.chat-messages { padding: 20px 20px; }
-.chat-book-banner { margin: 0 20px 8px; }
-.chat-suggestions { padding: 0 20px 12px; }
-.chat-input-row { padding: 8px 20px 16px; }
-}
-@media (max-width: 768px) {
-#main-nav { padding: 0 12px; gap: 6px; height: 60px; }
-.nav-logo { font-size: 1.5rem; margin-right: 6px; }
-.nav-btn { padding: 6px 10px; font-size: 0.78rem; }
-.nav-book { padding: 6px 12px; font-size: 0.78rem; }
-.nav-arrow { width: 30px; height: 30px; min-width: 30px; font-size: 0.9rem; }
-#page-chat { height: calc(100vh - 60px); }
-.chat-messages { padding: 16px; }
-.msg-bubble { max-width: 88%; font-size: 0.92rem; padding: 12px 14px; }
-.msg-avatar { width: 36px; height: 36px; }
-.chat-suggestions { padding: 0 12px 10px; gap: 6px; }
-.suggestion-chip { font-size: 0.8rem; padding: 6px 12px; }
-.chat-book-banner { margin: 0 12px 8px; font-size: 0.88rem; padding: 10px 14px; }
-.chat-input-row { padding: 6px 12px 14px; }
-#page-history { padding: 20px 16px; }
-.history-header { flex-direction: column; gap: 12px; }
-.history-search { width: 100%; }
-.history-header h2 { font-size: 1.8rem; }
-.history-cards { gap: 12px; }
-.history-card { width: calc(50% - 6px); min-height: 110px; }
-.profile-wrap { padding: 16px; }
-.profile-header { gap: 12px; }
-.profile-badges { margin-left: 0; }
-.profile-grid { grid-template-columns: 1fr; }
-.profile-field.wide { grid-column: span 1; }
-.profile-field.flex-row { flex-direction: column; align-items: flex-start; gap: 10px; }
-.course-code { min-width: 72px; }
-.course-name { font-size: 0.82rem; }
-.resource-wrap { padding: 16px; }
-.resource-links-grid { grid-template-columns: 1fr; }
-.resource-cta { flex-direction: column; gap: 16px; text-align: center; }
-.resource-contact { flex-direction: column; gap: 12px; }
-.deadline-row { font-size: 0.88rem; }
-.modal { padding: 28px 20px; }
-.modal h2 { font-size: 1.1rem; }
-.modal-btn { min-width: 110px; padding: 12px 18px; }
-}
-@media (max-width: 480px) {
-.nav-links { gap: 2px; }
-.nav-btn { padding: 5px 7px; font-size: 0.72rem; }
-.nav-book { display: none; }
-.history-card { width: 100%; }
-.login-body h1 { font-size: 1.8rem; }
-}
+@media (max-width: 1024px) { .nav-btn { padding: 8px 14px; font-size: 0.88rem; } #page-history { padding: 32px 28px; } .history-search { width: 260px; } .profile-wrap { padding: 24px 28px; } .resource-wrap { padding: 24px 28px; } .chat-messages { padding: 20px; } .chat-book-banner { margin: 0 20px 8px; } .chat-suggestions { padding: 0 20px 12px; } .chat-input-row { padding: 8px 20px 16px; } }
+@media (max-width: 768px) { #main-nav { padding: 0 12px; gap: 6px; height: 60px; } .nav-logo { font-size: 1.5rem; } .nav-btn { padding: 6px 10px; font-size: 0.78rem; } .nav-book { padding: 6px 12px; font-size: 0.78rem; } .nav-arrow { width: 30px; height: 30px; } #page-chat { height: calc(100vh - 60px); } .chat-messages { padding: 16px; } .msg-bubble { max-width: 88%; } .chat-suggestions { padding: 0 12px 10px; } .chat-book-banner { margin: 0 12px 8px; } .chat-input-row { padding: 6px 12px 14px; } #page-history { padding: 20px 16px; } .history-header { flex-direction: column; } .history-search { width: 100%; } .history-card { width: calc(50% - 6px); } .profile-wrap { padding: 16px; } .profile-grid { grid-template-columns: 1fr; } .profile-field.wide { grid-column: span 1; } .resource-wrap { padding: 16px; } .resource-links-grid { grid-template-columns: 1fr; } .resource-cta { flex-direction: column; gap: 16px; } }
+@media (max-width: 480px) { .nav-btn { padding: 5px 7px; font-size: 0.72rem; } .nav-book { display: none; } .history-card { width: 100%; } }
 </style>
 </head>
 <body>
  
-<!-- LOGIN -->
 <div id="login-shell">
 <div class="login-nav"><span class="login-nav-logo">UAAI</span></div>
 <div class="login-body">
@@ -275,7 +164,6 @@ background: #E0DCDC; margin: 0 32px 8px; border-radius: 8px; padding: 12px 20px;
 </div>
 </div>
  
-<!-- APP -->
 <div id="app-shell">
 <nav id="main-nav">
 <span class="nav-logo">UAAI</span>
@@ -286,10 +174,9 @@ background: #E0DCDC; margin: 0 32px 8px; border-radius: 8px; padding: 12px 20px;
 <button class="nav-btn" id="btn-resource" onclick="showPage('resource')">Resource</button>
 </div>
 <button class="nav-book" onclick="bookAdvisor()">Book Advisor</button>
-<button class="nav-arrow nav-arrow-tooltip" onclick="doLogout()" title="Log out">&#8594;</button>
+<button class="nav-arrow nav-arrow-tooltip" onclick="doLogout()">&#8594;</button>
 </nav>
  
-<!-- CHAT -->
 <div id="page-chat" class="page">
 <div class="chat-messages" id="chat-messages">
 <div class="msg-row">
@@ -315,15 +202,11 @@ background: #E0DCDC; margin: 0 32px 8px; border-radius: 8px; padding: 12px 20px;
 </div>
 </div>
  
-<!-- HISTORY -->
 <div id="page-history" class="page">
 <div class="history-header">
-<div>
-<h2>Chat History</h2>
-<p class="history-sub">Your previous conversations with Dubs &#128062;</p>
-</div>
+<div><h2>Chat History</h2><p class="history-sub">Your previous conversations with Dubs 🐺</p></div>
 <div class="history-search">
-<span style="color:#888;">&#128269;</span>
+<span style="color:#888;">🔍</span>
 <input type="text" placeholder="Search conversations..." id="history-search" oninput="filterHistory()" />
 </div>
 </div>
@@ -331,20 +214,16 @@ background: #E0DCDC; margin: 0 32px 8px; border-radius: 8px; padding: 12px 20px;
 <div class="history-cards" id="history-cards"></div>
 </div>
  
-<!-- PROFILE -->
 <div id="page-profile" class="page">
 <div class="profile-wrap">
 <div class="profile-header">
-<div class="profile-avatar">&#128100;</div>
+<div class="profile-avatar">👤</div>
 <div>
 <div class="profile-name" id="profile-display-name">Student</div>
 <div class="profile-id">Student ID: 1235678</div>
 <div class="profile-id" id="profile-netid">Net ID: —</div>
 </div>
-<div class="profile-badges">
-<div class="badge">Active<br>Student</div>
-<div class="badge">Junior<br>Standing</div>
-</div>
+<div class="profile-badges"><div class="badge">Active<br>Student</div><div class="badge">Junior<br>Standing</div></div>
 </div>
 <div class="profile-grid">
 <div class="profile-field"><label>School</label><span>Information School</span></div>
@@ -373,7 +252,6 @@ background: #E0DCDC; margin: 0 32px 8px; border-radius: 8px; padding: 12px 20px;
 </div>
 </div>
  
-<!-- RESOURCE -->
 <div id="page-resource" class="page">
 <div class="resource-wrap">
 <div class="resource-deadlines">
@@ -385,12 +263,12 @@ background: #E0DCDC; margin: 0 32px 8px; border-radius: 8px; padding: 12px 20px;
 </div>
 <p class="resource-links-header">UW Student Resources</p>
 <div class="resource-links-grid">
-<a class="resource-link" href="https://myuw.uw.edu" target="_blank"><div class="resource-link-icon"></div><span class="resource-link-name">MyUW</span><span>&#8599;</span></a>
-<a class="resource-link" href="https://www.washington.edu/students/timeschd/" target="_blank"><div class="resource-link-icon"></div><span class="resource-link-name">Course Catalog</span><span>&#8599;</span></a>
-<a class="resource-link" href="https://myplan.uw.edu" target="_blank"><div class="resource-link-icon"></div><span class="resource-link-name">Degree Audit (DARS)</span><span>&#8599;</span></a>
-<a class="resource-link" href="https://careers.uw.edu" target="_blank"><div class="resource-link-icon"></div><span class="resource-link-name">Career &amp; Internship Center</span><span>&#8599;</span></a>
-<a class="resource-link" href="https://www.washington.edu/financialaid/" target="_blank"><div class="resource-link-icon"></div><span class="resource-link-name">Financial Aid Office</span><span>&#8599;</span></a>
-<a class="resource-link" href="https://depts.washington.edu/uwdrs/" target="_blank"><div class="resource-link-icon"></div><span class="resource-link-name">Disability Resources (DRS)</span><span>&#8599;</span></a>
+<a class="resource-link" href="https://myuw.uw.edu" target="_blank"><div class="resource-link-icon"></div><span class="resource-link-name">MyUW</span><span>↗</span></a>
+<a class="resource-link" href="https://www.washington.edu/students/timeschd/" target="_blank"><div class="resource-link-icon"></div><span class="resource-link-name">Course Catalog</span><span>↗</span></a>
+<a class="resource-link" href="https://myplan.uw.edu" target="_blank"><div class="resource-link-icon"></div><span class="resource-link-name">Degree Audit (DARS)</span><span>↗</span></a>
+<a class="resource-link" href="https://careers.uw.edu" target="_blank"><div class="resource-link-icon"></div><span class="resource-link-name">Career &amp; Internship Center</span><span>↗</span></a>
+<a class="resource-link" href="https://www.washington.edu/financialaid/" target="_blank"><div class="resource-link-icon"></div><span class="resource-link-name">Financial Aid Office</span><span>↗</span></a>
+<a class="resource-link" href="https://depts.washington.edu/uwdrs/" target="_blank"><div class="resource-link-icon"></div><span class="resource-link-name">Disability Resources (DRS)</span><span>↗</span></a>
 </div>
 <div class="resource-cta">
 <div class="resource-cta-text">
@@ -401,8 +279,8 @@ background: #E0DCDC; margin: 0 32px 8px; border-radius: 8px; padding: 12px 20px;
 <div id="resource-husky"></div>
 </div>
 <div class="resource-contact">
-<div class="contact-item"><span style="font-size:1.4rem;">&#9993;&#65039;</span><div><div style="font-weight:700;text-decoration:underline;">email advising</div><div>xxx@uw.edu</div></div></div>
-<div class="contact-item"><span style="font-size:1.4rem;">&#128222;</span><div><div style="font-weight:700;text-decoration:underline;">call advising</div><div>XXX-XXX-XXXX</div></div></div>
+<div class="contact-item"><span style="font-size:1.4rem;">✉️</span><div><div style="font-weight:700;text-decoration:underline;">email advising</div><div>xxx@uw.edu</div></div></div>
+<div class="contact-item"><span style="font-size:1.4rem;">📞</span><div><div style="font-weight:700;text-decoration:underline;">call advising</div><div>XXX-XXX-XXXX</div></div></div>
 </div>
 </div>
 </div>
@@ -425,7 +303,7 @@ background: #E0DCDC; margin: 0 32px 8px; border-radius: 8px; padding: 12px 20px;
 <div style="font-size:0.78rem;color:#888;margin-bottom:4px;font-weight:600;">CONVERSATION TITLE</div>
 <input id="editor-title" style="font-size:1.1rem;font-weight:700;border:none;border-bottom:2px solid var(--purple-dark);outline:none;background:transparent;font-family:'DM Sans',sans-serif;width:100%;" />
 </div>
-<button onclick="closeModal('modal-chat-editor')" style="background:none;border:none;font-size:1.6rem;cursor:pointer;color:#888;line-height:1;">&times;</button>
+<button onclick="closeModal('modal-chat-editor')" style="background:none;border:none;font-size:1.6rem;cursor:pointer;color:#888;">&times;</button>
 </div>
 <div style="font-size:0.78rem;color:#888;font-weight:600;margin-bottom:10px;">MESSAGES</div>
 <div id="editor-messages" style="display:flex;flex-direction:column;gap:10px;margin-bottom:24px;"></div>
@@ -484,33 +362,26 @@ let conversations = [
 { id: 1, title: 'graduation requirement check', date: 'today, 9:32am', messages: [
 { role: 'assistant', text: 'Hello there! My name is Dubs, your UW academic advisor assistant. I can help with course planning, graduation requirements, registration, major changes, and more.\n\nWhat can I help you with today?' },
 { role: 'user', text: 'What do I need to graduate from Informatics?' },
-{ role: 'assistant', text: 'For the Informatics major you need 180 total credits, including all core INFO requirements, your chosen track electives, and UW distribution requirements.\n\nYour DARS shows you\'re at 87/180 credits. You still need the capstone sequence (INFO 490 + 491), your A&H and SSc distribution credits, and roughly 5-6 more elective courses. Would you like a breakdown of each category?' },
-{ role: 'user', text: 'Yes please show me a breakdown' },
-{ role: 'assistant', text: 'Here\'s what you still need:\n\n• Core INFO courses: INFO 430, INFO 445 remaining\n• Capstone: INFO 490 (Research Methods) + INFO 491 (Capstone Project)\n• Track electives (Design): 2 more courses needed\n• A&H distribution: 5 credits remaining\n• SSc distribution: 5 credits remaining\n• General electives: ~15 credits to reach 180 total\n\nYou\'re on track for June 2027 graduation! Want me to help find courses that fulfill multiple requirements at once?' }
+{ role: 'assistant', text: 'For the Informatics major you need 180 total credits, including all core INFO requirements, your chosen track electives, and UW distribution requirements.\n\nYour DARS shows you\'re at 87/180 credits. You still need the capstone sequence (INFO 490 + 491), your A&H and SSc distribution credits, and roughly 5-6 more elective courses. Would you like a breakdown of each category?' }
 ]},
 { id: 2, title: 'adding a minor', date: '05/18/2026, 11:18am', messages: [
-{ role: 'assistant', text: 'Hello there! My name is Dubs, your UW academic advisor assistant. I can help with course planning, graduation requirements, registration, major changes, and more.\n\nWhat can I help you with today?' },
+{ role: 'assistant', text: 'Hello there! My name is Dubs, your UW academic advisor assistant.\n\nWhat can I help you with today?' },
 { role: 'user', text: 'I want to add a Data Science minor, how do I do that?' },
-{ role: 'assistant', text: 'Great choice! You actually already have Data Science listed as one of your tracks, so you\'re partway there.\n\nTo officially declare it as a minor, you\'ll need:\n1. DATA 311 - Statistical Methods in Bioinformatics\n2. DATA 411 - Machine Learning for Data Scientists\n3. Two approved DATA electives\n\nYour INFO 201 (Foundational Skills for Data Science, 3.8) counts toward the minor. You can declare it officially in MyUW under Academic Records > Declare Minor.' }
+{ role: 'assistant', text: 'Great choice! You can declare it officially in MyUW under Academic Records > Declare Minor. Your INFO 201 already counts toward it!' }
 ]},
 { id: 3, title: 'course search for fall quarter', date: '05/09/2026, 2:08pm', messages: [
-{ role: 'assistant', text: 'Hello there! My name is Dubs, your UW academic advisor assistant. I can help with course planning, graduation requirements, registration, major changes, and more.\n\nWhat can I help you with today?' },
-{ role: 'user', text: 'Hello, I would like to explore classes to fulfill my A&H credits. Can you help me find some for fall quarter that fit into my current schedule?' },
-{ role: 'assistant', text: 'Of course!\nI have found three 5-credit A&H classes that work with your schedule, and still allow you to have no classes on Mondays. Would you like to know more about these options?' },
-{ role: 'user', text: 'Yes please' },
-{ role: 'assistant', text: 'Perfect! Here are three A&H classes that fit your needs.\n\nLING 200: Instructor - Laura W. McGarrity. Meeting times: TTh 10:30am-12:20pm, JHN 102.\n\nEDUC 215: Instructor - Jaclyn Lally. Meeting times: Th 2:30pm-5:20pm, ARC 147. Variable quiz section times on F.\n\nCMS 303: Instructor - Stephen F Groening. Meeting times: WF 12:30pm-2:20pm, SMI 304.\n\nWould you like me to add any of these to your planned courses in MyPlan?' },
-{ role: 'user', text: 'Yes, if you could add EDUC 215 to my planned courses, that would be great.' },
-{ role: 'assistant', text: 'Done! I\'ve added EDUC 215 (Instructor: Jaclyn Lally, Th 2:30-5:20pm) to your MyPlan for Fall 2026.\n\nYour fall schedule is shaping up nicely with no Monday classes. Is there anything else I can help you with?' }
+{ role: 'assistant', text: 'Hello there! My name is Dubs, your UW academic advisor assistant.\n\nWhat can I help you with today?' },
+{ role: 'user', text: 'Can you help me find A&H classes for fall quarter?' },
+{ role: 'assistant', text: 'Of course! Here are three 5-credit A&H classes with no Monday meetings:\n\nLING 200: TTh 10:30am-12:20pm\nEDUC 215: Th 2:30pm-5:20pm\nCMS 303: WF 12:30pm-2:20pm\n\nWould you like me to add any to your MyPlan?' }
 ]}
 ];
  
 const fakeResponses = [
 "Great question! Based on your academic profile, I'd recommend speaking with Dr. Maria Santos directly about that. You can book an appointment using the Book Advisor button above.",
-"I can look into that for you! Based on your current credits (87/180) and your Informatics major requirements, you're in good standing. Is there anything specific you'd like me to check?",
-"That's a common question for Informatics students! The iSchool office hours are Tuesdays and Thursdays 1-4pm in MGH 370. You can also email them at info-advising@uw.edu.",
-"Looking at your course history, you've done great work so far with a 3.8 in your core courses. I'd be happy to help you plan out the next steps toward graduation!",
-"For that, I'd suggest checking MyPlan — it has the most up-to-date requirements for your specific catalog year. Want me to walk you through how to read your DARS report?",
-"Noted! I'll keep that preference in mind. No Monday classes and a focus on your Design and Data Science tracks — I can definitely work with that.",
+"Based on your current credits (87/180) and your Informatics major requirements, you're in good standing. Is there anything specific you'd like me to check?",
+"That's a common question for Informatics students! The iSchool office hours are Tuesdays and Thursdays 1-4pm in MGH 370.",
+"Looking at your course history, you've done great work so far with a 3.8 in your core courses. I'd be happy to help plan your next steps!",
+"I'd suggest checking MyPlan — it has the most up-to-date requirements for your catalog year. Want me to walk you through your DARS report?",
 ];
 let fakeIdx = 0;
 let currentEditId = null, currentDeleteId = null, chatContext = [];
@@ -523,9 +394,7 @@ let name = input.includes('@') ? input.split('@')[0] : input;
 name = name.split(/[\._]/)[0];
 return name.charAt(0).toUpperCase() + name.slice(1);
 }
-function getNetID(input) {
-return input.includes('@') ? input.split('@')[0] : input;
-}
+function getNetID(input) { return input.includes('@') ? input.split('@')[0] : input; }
  
 function doLogin() {
 const netid = document.getElementById('netid-input').value.trim();
@@ -543,7 +412,6 @@ showPage('chat');
 }
  
 function doLogout() { document.getElementById('modal-logout').classList.add('open'); }
- 
 function confirmLogout() {
 closeModal('modal-logout');
 document.getElementById('app-shell').classList.remove('visible');
@@ -557,20 +425,15 @@ resetChat();
 function resetChat() {
 const container = document.getElementById('chat-messages');
 container.innerHTML = '';
-const row = document.createElement('div');
-row.className = 'msg-row';
-const av = document.createElement('div');
-av.className = 'msg-avatar';
-av.innerHTML = huskySmall();
-const bubble = document.createElement('div');
-bubble.className = 'msg-bubble';
+const row = document.createElement('div'); row.className = 'msg-row';
+const av = document.createElement('div'); av.className = 'msg-avatar'; av.innerHTML = huskySmall();
+const bubble = document.createElement('div'); bubble.className = 'msg-bubble';
 const savedName = document.getElementById('greeting-name') ? document.getElementById('greeting-name').textContent : 'there';
 bubble.innerHTML = 'Hello <span id="greeting-name">' + savedName + '</span>! My name is Dubs, your UW academic advisor assistant. I can help with course planning, graduation requirements, registration, major changes, and more.<br><br>What can I help you with today?';
 row.appendChild(av); row.appendChild(bubble);
 container.appendChild(row);
 document.getElementById('chat-suggestions').style.display = 'flex';
-chatContext = [];
-inFakeMode = false;
+chatContext = []; inFakeMode = false;
 }
  
 function showPage(page) {
@@ -592,13 +455,9 @@ addMessage('user', text);
  
 if (inFakeMode) {
 const typingId = addTyping();
-await delay(900 + Math.random() * 600);
+await delay(800 + Math.random() * 500);
 removeTyping(typingId);
-const reply = fakeResponses[fakeIdx % fakeResponses.length];
-fakeIdx++;
-addMessage('assistant', reply);
-chatContext.push({ role: 'user', content: text });
-chatContext.push({ role: 'assistant', content: reply });
+addMessage('assistant', fakeResponses[fakeIdx++ % fakeResponses.length]);
 } else {
 chatContext.push({ role: 'user', content: text });
 const typingId = addTyping();
@@ -607,7 +466,6 @@ const res = await fetch('https://api.anthropic.com/v1/messages', {
 method: 'POST',
 headers: {
 'Content-Type': 'application/json',
-'x-api-key': '',
 'anthropic-version': '2023-06-01',
 'anthropic-dangerous-direct-browser-access': 'true'
 },
@@ -621,9 +479,9 @@ messages: chatContext
 const data = await res.json();
 removeTyping(typingId);
 if (data.error) {
-addMessage('assistant', "Sorry, I'm having trouble connecting right now. Please try again!");
+addMessage('assistant', "Sorry, I'm having trouble right now. Please try again!");
 } else {
-const reply = data.content?.[0]?.text || "Sorry, I couldn't get a response. Please try again.";
+const reply = data.content?.[0]?.text || "Sorry, I couldn't get a response.";
 addMessage('assistant', reply);
 chatContext.push({ role: 'assistant', content: reply });
 }
@@ -678,22 +536,19 @@ const filtered = conversations.filter(c => c.title.toLowerCase().includes(q));
 countEl.textContent = filtered.length + ' conversation' + (filtered.length !== 1 ? 's' : '');
 cards.innerHTML = '';
 filtered.forEach(c => {
-const card = document.createElement('div');
-card.className = 'history-card';
-card.innerHTML = '<div class="history-card-title">' + c.title + '</div><div class="history-card-footer"><span class="history-card-date">' + c.date + '</span><div class="card-actions"><button class="card-icon-btn" title="Edit" onclick="event.stopPropagation();openEditModal(' + c.id + ')">&#9998;</button><button class="card-icon-btn" title="Delete" onclick="event.stopPropagation();openDeleteModal(' + c.id + ')">&#128465;</button></div></div>';
+const card = document.createElement('div'); card.className = 'history-card';
+card.innerHTML = '<div class="history-card-title">' + c.title + '</div><div class="history-card-footer"><span class="history-card-date">' + c.date + '</span><div class="card-actions"><button class="card-icon-btn" onclick="event.stopPropagation();openEditModal(' + c.id + ')">✏️</button><button class="card-icon-btn" onclick="event.stopPropagation();openDeleteModal(' + c.id + ')">🗑️</button></div></div>';
 card.addEventListener('click', () => openConversation(c.id));
 cards.appendChild(card);
 });
 }
- 
 function filterHistory() { renderHistory(document.getElementById('history-search').value); }
  
 function openConversation(id) {
 const conv = conversations.find(c => c.id === id);
 if (!conv) return;
 const container = document.getElementById('chat-messages');
-container.innerHTML = '';
-chatContext = [];
+container.innerHTML = ''; chatContext = [];
 conv.messages.forEach(m => {
 addMessage(m.role, m.text);
 chatContext.push({ role: m.role === 'assistant' ? 'assistant' : 'user', content: m.text });
@@ -713,38 +568,27 @@ function confirmEdit() {
 closeModal('modal-edit');
 const conv = conversations.find(c => c.id === currentEditId);
 document.getElementById('editor-title').value = conv.title;
-const container = document.getElementById('editor-messages');
-container.innerHTML = '';
+const container = document.getElementById('editor-messages'); container.innerHTML = '';
 conv.messages.forEach((m, i) => {
-const wrap = document.createElement('div');
-wrap.className = 'editor-msg ' + m.role;
-const label = document.createElement('div');
-label.className = 'editor-msg-label lbl-' + m.role;
+const wrap = document.createElement('div'); wrap.className = 'editor-msg ' + m.role;
+const label = document.createElement('div'); label.className = 'editor-msg-label lbl-' + m.role;
 label.textContent = m.role === 'assistant' ? 'Dubs' : 'Student';
 const ta = document.createElement('textarea');
 ta.rows = Math.min(8, Math.max(2, Math.ceil(m.text.length / 80)));
-ta.dataset.idx = i;
-ta.value = m.text;
-wrap.appendChild(label); wrap.appendChild(ta);
-container.appendChild(wrap);
+ta.dataset.idx = i; ta.value = m.text;
+wrap.appendChild(label); wrap.appendChild(ta); container.appendChild(wrap);
 });
 document.getElementById('modal-chat-editor').classList.add('open');
 }
- 
 function saveEditedConversation() {
 const conv = conversations.find(c => c.id === currentEditId);
 const newTitle = document.getElementById('editor-title').value.trim();
 if (newTitle) conv.title = newTitle;
-const textareas = document.querySelectorAll('#editor-messages textarea');
-textareas.forEach(ta => {
-const idx = parseInt(ta.dataset.idx);
-conv.messages[idx].text = ta.value;
+document.querySelectorAll('#editor-messages textarea').forEach(ta => {
+conv.messages[parseInt(ta.dataset.idx)].text = ta.value;
 });
-closeModal('modal-chat-editor');
-showToast('Conversation saved!');
-renderHistory();
+closeModal('modal-chat-editor'); showToast('Conversation saved!'); renderHistory();
 }
- 
 function openDeleteModal(id) {
 currentDeleteId = id;
 const conv = conversations.find(c => c.id === id);
@@ -753,9 +597,7 @@ document.getElementById('modal-delete').classList.add('open');
 }
 function confirmDelete() {
 conversations = conversations.filter(c => c.id !== currentDeleteId);
-closeModal('modal-delete');
-showToast('Conversation deleted.');
-renderHistory();
+closeModal('modal-delete'); showToast('Conversation deleted.'); renderHistory();
 }
 function closeModal(id) { document.getElementById(id).classList.remove('open'); }
 function bookAdvisor() { document.getElementById('modal-book').classList.add('open'); }
